@@ -1,6 +1,4 @@
-import java.util.ArrayList;
 import java.util.HashMap;
-
 
 public class Disciplina {
 
@@ -8,7 +6,6 @@ public class Disciplina {
     private int fase;
 
     private HashMap<String, Professor> professores = new HashMap<>();
-    private ArrayList<Avaliacao> avaliacoes = new ArrayList<>();
     private HashMap<String, Aluno> alunosMatriculados = new HashMap<>();
 
     public String getNome() {
@@ -36,12 +33,6 @@ public class Disciplina {
             return true;
         }
         return false;
-    }
-    public ArrayList<Avaliacao> getAvaliacoes() {
-        return avaliacoes;
-    }
-    public void setAvaliacoes(ArrayList<Avaliacao> avaliacoes) {
-        this.avaliacoes = avaliacoes;
     }
     public String getNomeDisciplina() {
         return nomeDisciplina;

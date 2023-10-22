@@ -17,6 +17,8 @@ public class SistemaMain {
         Disciplina disciplina = new Disciplina();
         disciplina.setNome("disciplina1");
         HashMap<String, Professor> professores = new HashMap<>();
+        HashMap<String, Disciplina> disciplinas = new HashMap<>();
+        disciplinas.put(disciplina.getNome(), disciplina);
 
         Professor p1 = new Professor();
         p1.setNome("prof1");
@@ -38,6 +40,8 @@ public class SistemaMain {
         professores.put("prof5", p5);
         System.out.println(disciplina.setProfessores(professores));
 
+        curso.adicionarFase(1, disciplinas );
+
         aluno.matricular("disciplina1", 1);
         
         
@@ -54,18 +58,55 @@ public class SistemaMain {
 
         // switch (option) {
         //     case 1:
-        
-                    System.out.println("Ações disponíveis: ");
-                    System.out.println("[1] - Listar disciplinas lecionadas");
-                    System.out.println("[2] - Registrar frequência");
-                    System.out.println("[3] - Registrar avaliação");
+
+        //             do {
+
+        //                 System.out.println("Ações disponíveis: ");
+        //                 System.out.println("[1] - Listar disciplinas lecionadas");
+        //                 System.out.println("[2] - Registrar frequência");
+        //                 System.out.println("[3] - Registrar avaliação");
+        //                 System.out.println("[4] - Listar professores");
+        //                 System.out.println("[5] - Listar alunos por disciplina");
+        //                 System.out.println("[6] - Voltar");
+    
+        //                 int option2 = scanner.nextInt();
+    
+        //                 switch(option2) {
+        //                     case 1:
+    
+        //                     break;
+    
+        //                     case 2:
+        //                     break;
+    
+        //                     case 3: 
+        //                     break;
+    
+        //                     case 4: 
+        //                     break;
+    
+        //                     case 5: 
+        //                     break;
+    
+        //                     case 6:
+    
+        //                     break;
+    
+        //                     default:
+        //                     break;
+        //                 }
+
+        //             } while(verificador);
+
+
 
 
         //     break;
 
         //     case 2:
 
-                    System.out.println("[1] - ");
+        //             System.out.println("[1] - Matricular aluno");
+        //             System.out.println("[2] - ");
 
         //     break;
 
