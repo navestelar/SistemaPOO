@@ -5,33 +5,26 @@ public class Curso {
     
     private String nome;
     private HashMap<Integer, Fase> fases = new HashMap<>();
+    private HashMap<String, Aluno> alunosMatriculados = new HashMap<>(); 
 
-    public void listarDisciplinasOfertadas() {
-        
+    public HashMap<String, Aluno> getAlunosMatriculados() {
+        return alunosMatriculados;
+    }
+
+    public void setAlunosMatriculados(HashMap<String, Aluno> alunosMatriculados) {
+        this.alunosMatriculados = alunosMatriculados;
+    }
+
+    public Aluno getAlunoByName(String nomeAluno) {
+        return alunosMatriculados.get(nomeAluno);
     }
 
     public void listarFases() {
-    for (Map.Entry<Integer, Fase> entry : fases.entrySet()) {
-        Fase fase = entry.getValue();
-        System.out.println(fase.getNumeroFase());
+        for (Map.Entry<Integer, Fase> entry : fases.entrySet()) {
+            Fase fase = entry.getValue();
+            System.out.println(fase.getNumeroFase());
         }
     }
-
-    public void adicionarDisciplina(int Fase, Disciplina disciplina) {
-        
-
-    }
-
-    public void listarDisciplinas() {
-
-    }
-
-    public void listarAlunosMatriculados() {
-
-
-    }
-
-
 
     public String getNome() {
         return nome;
@@ -44,16 +37,6 @@ public class Curso {
     }
     public Fase getFaseByNumber(Integer fase) {
         return fases.get(fase);
-    }
-    public boolean adicionarFase(int numeroFase, HashMap<String, Disciplina> disciplinas) {
-        if (getFaseByNumber(numeroFase) == null) {
-            return false;
-        }
-        Fase fase = new Fase();
-        fase.setNumeroFase(numeroFase);
-        fase.setDisciplinas(disciplinas);
-        fases.put(fase.getNumeroFase(), fase);
-        return true;
     }
     public void setFases(HashMap<Integer ,Fase> fases) {
         this.fases = fases;

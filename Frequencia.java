@@ -1,24 +1,20 @@
 public class Frequencia {
 
-    private float frequencia;
+    private float porcentagemFrequencia;
     private Professor professor;
     private Disciplina disciplina;
     
-    public Frequencia() {
-    }
-
-    public Frequencia(float frequencia, Professor professor, Disciplina disciplina) {
-        this.frequencia = frequencia;
+    public Frequencia(float porcentagemFrequencia, Professor professor, Disciplina disciplina) {
+        this.porcentagemFrequencia = porcentagemFrequencia;
         this.professor = professor;
         this.disciplina = disciplina;
     }
 
-    public float getFrequencia() {
-        return frequencia;
+
+    public Frequencia() {
     }
-    public void setFrequencia(float frequencia) {
-        this.frequencia = frequencia;
-    }
+
+
     public Professor getProfessor() {
         return professor;
     }
@@ -26,14 +22,21 @@ public class Frequencia {
         this.professor = professor;
     }
     
-    @Override
-    public String toString() {
-        return "Frequencia [frequencia=" + frequencia + ", professor=" + professor + "]";
-    }
+
     public Disciplina getDisciplina() {
         return disciplina;
     }
     public void setDisciplina(Disciplina disciplina) {
         this.disciplina = disciplina;
+    }
+
+
+    public float getPorcentagemFrequencia() {
+        return porcentagemFrequencia;
+    }
+
+
+    public void setPorcentagemFrequencia(float porcentagemFrequencia) {
+        this.porcentagemFrequencia = porcentagemFrequencia;
     }
 }

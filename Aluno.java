@@ -19,25 +19,12 @@ public class Aluno extends Pessoa {
         this.curso = curso;
         this.disciplinasMatriculadas = disciplinasMatriculadas;
     }
-
-    public String matricular(String nomeDisciplina, int fase) {
-        
-        boolean disciplinaJaExiste = this.getDisciplinaMatriculadaByName(nomeDisciplina) == null;
-
-        if (disciplinaJaExiste) {
-            return "Aluno já matriculado nesta disciplina";
-        }
-        //se a disciplina já existir o código para por aqui 
-        
-        Disciplina disciplina = curso.getFaseByNumber(fase).getDisciplinaByName(nomeDisciplina);
-        disciplinasMatriculadas.put(disciplina.getNome(), disciplina);
-        return "Matrícula realizada com sucesso!";
-    }
+    
     
     public void registrarFrequencia(String nomeDisciplina, String nomeProfessor, float porcentagemFrequencia) {
         Frequencia frequencia = new Frequencia();
         frequencia.setDisciplina(getDisciplinaMatriculadaByName(nomeDisciplina));
-        frequencia.setFrequencia(porcentagemFrequencia);
+        frequencia.setPorcentagemFrequencia(porcentagemFrequencia);
         frequencia.setProfessor(getDisciplinaMatriculadaByName(nomeDisciplina).getProfessoreByName(nomeProfessor));
 
         frequencias.put(nomeProfessor, frequencia);
